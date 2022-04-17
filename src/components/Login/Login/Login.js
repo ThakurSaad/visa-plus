@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 
@@ -9,6 +12,8 @@ const Login = () => {
   const navigate = useNavigate();
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, resetError] =
+    useSendPasswordResetEmail(auth);
   let errorElement;
   let displayLoading;
 
@@ -29,13 +34,23 @@ const Login = () => {
       </p>
     );
   }
-
+  // submit btn handler
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
     console.log(email, password);
+  };
+  // reset btn handler
+  const handleResetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      alert("email sent");
+    } else {
+      alert("input your email");
+    }
   };
   return (
     <section className="mt-20" id="login-form">
@@ -72,7 +87,7 @@ const Login = () => {
         </Link>
       </p>
       <button
-        // onClick={handleResetPassword}
+        onClick={handleResetPassword}
         className="text-sm block mx-auto text-sky-900 my-1"
       >
         Forget Password ? <span className="text-blue-700">Reset</span>

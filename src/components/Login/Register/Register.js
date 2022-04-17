@@ -6,7 +6,7 @@ import auth from "../../../firebase.init";
 const Register = () => {
   const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   let errorElement;
   let displayLoading;
 
