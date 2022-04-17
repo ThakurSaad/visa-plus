@@ -15,11 +15,11 @@ const Header = () => {
           <img src={logo} alt="" />
         </Link>
       </div>
-      <div className="md:pr-4 grid grid-cols-1 md:flex md:items-center">
-        <Link className="font-semibold mx-4" to="/blogs">
+      <div className="md:pr-4 grid justify-items-center grid-cols-1 md:flex md:items-center">
+        <Link className="font-semibold mx-8" to="/blogs">
           Blogs
         </Link>
-        <Link className="font-semibold mx-4" to="/aboutme">
+        <Link className="font-semibold mx-8" to="/aboutme">
           About Me
         </Link>
         {user ? (
@@ -30,7 +30,7 @@ const Header = () => {
             Sign Out
           </button>
         ) : (
-          <div>
+          <div className="grid grid-cols-1 items-center justify-items-center md:grid-cols-2">
             <Link className="font-semibold mx-4" to="/login">
               Login
             </Link>
