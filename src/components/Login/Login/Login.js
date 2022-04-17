@@ -81,7 +81,7 @@ const Login = () => {
         />
       </form>
       <p className="text-sm text-center text-sky-900 my-1">
-        New to VisaPlus ?{" "}
+        New to Visa Plus ?{" "}
         <Link className="text-blue-700" to="/register">
           Register
         </Link>

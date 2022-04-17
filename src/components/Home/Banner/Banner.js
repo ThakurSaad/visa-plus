@@ -12,7 +12,7 @@ const Banner = () => {
           style={{ textShadow: "0 0 5px black, 3px 3px 5px white" }}
           className="font-extrabold text-6xl md:text-8xl"
         >
-          Visa Hub
+          Visa Plus
         </h1>
         <p
           style={{ textShadow: "0 0 5px black, 0 0 5px white" }}
