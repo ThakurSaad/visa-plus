@@ -1,26 +1,63 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
 
 const Login = () => {
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+  const navigate = useNavigate();
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  let errorElement;
+  let displayLoading;
+
+  if (user) {
+    navigate("/");
+  }
+  if (loading) {
+    displayLoading = (
+      <p className="text-sm text-center rounded-md bg-sky-900 text-white absolute left-0 right-0 top-20 mx-auto w-72 p-2">
+        Loading...
+      </p>
+    );
+  }
+  if (error) {
+    errorElement = (
+      <p className="text-sm rounded-md bg-orange-100 text-red-700 absolute left-0 right-0 my-3 mx-auto w-72 p-2">
+        {error.message}
+      </p>
+    );
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+    signInWithEmailAndPassword(email, password);
+    console.log(email, password);
+  };
   return (
     <section className="mt-20" id="login-form">
-      {/* {displayLoading} */}
-
-      <form>
+      {displayLoading}
+      <form onSubmit={handleSubmit}>
         <input
-          // ref={emailRef}
+          ref={emailRef}
           className="text-sm border-none rounded-md bg-gray-100 block my-3 mx-auto w-72 py-4 pl-3"
           placeholder="Your Email"
           type="email"
           name="email"
           id="email-login"
+          required
         />
         <input
+          ref={passwordRef}
           className="text-sm border-none rounded-md bg-gray-100 block my-3 mx-auto w-72 py-4 pl-3"
           placeholder="Password"
           type="password"
           name="password"
           id="password-login"
+          required
         />
         <input
           className="text-sm rounded-md block text-white bg-sky-900 my-1 mx-auto w-72 py-4"
@@ -40,7 +77,7 @@ const Login = () => {
       >
         Forget Password ? <span className="text-blue-700">Reset</span>
       </button>
-      {/* {errorElement} */}
+      {errorElement}
       {/* <ToastContainer /> */}
     </section>
   );
