@@ -5,6 +5,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import Loading from "../../Loading/Loading";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -21,11 +22,7 @@ const Login = () => {
     navigate("/");
   }
   if (loading) {
-    displayLoading = (
-      <p className="text-sm text-center rounded-md bg-sky-900 text-white absolute left-0 right-0 top-20 mx-auto w-72 p-2">
-        Loading...
-      </p>
-    );
+    displayLoading = <Loading></Loading>;
   }
   if (error) {
     errorElement = (
