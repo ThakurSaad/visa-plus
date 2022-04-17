@@ -1,27 +1,27 @@
 [
     {
-        "id": "625c18fa24f3c1d3ce7d7e00",
+        "id": "1",
         "price": 289,
         "name": "Business Visa",
         "image": "./images/service1.png",
         "description": "I will provide business visa which is best suited for you"
     },
     {
-        "id": "625c18fa8faa58a1dae8d0a3",
+        "id": "2",
         "price": 293,
         "name": "Student Visa",
         "image": "./images/service2.png",
         "description": "Students are given some free of cost special services by me"
     },
     {
-        "id": "625c18fa9c440f4a05e12dc9",
+        "id": "3",
         "price": 289,
         "name": "Transit Visa",
         "image": "./images/service3.png",
         "description": "I will ensure you got the visa best suited for you"
     },
     {
-        "id": "625c18faa9da6182f457e1bd",
+        "id": "4",
         "price": 279,
         "name": "Tourist Visa",
         "image": "./images/service4.png",
