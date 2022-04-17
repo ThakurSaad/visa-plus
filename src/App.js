@@ -3,7 +3,7 @@ import "./App.css";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Blogs from "./components/Blogs/Blogs";
 import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
+import Home from "./components/Home/Home/Home";
 import Login from "./components/Login/Login/Login";
 import Register from "./components/Login/Register/Register";
 

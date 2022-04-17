@@ -7,7 +7,6 @@ import logo from "../../images/logo.png";
 
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
-
   return (
     <nav className="grid grid-cols-1 justify-items-center md:flex md:justify-between md:items-center text-sm">
       <div>
