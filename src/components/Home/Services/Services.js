@@ -11,7 +11,12 @@ const Services = () => {
   console.log(services);
   return (
     <section>
-      <h2 className="text-center font-bold text-5xl text-sky-900 my-8">My Services</h2>
+      <h2
+        style={{ textShadow: "0 0 5px black, 2px 2px 5px white" }}
+        className="text-center font-bold text-5xl my-8"
+      >
+        My Services
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
         {services.map((service) => (
           <Service key={service.id} service={service}></Service>
