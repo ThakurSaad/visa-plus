@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Loading/Loading";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const Register = () => {
   }
   if (error) {
     errorElement = (
-      <p className="text-sm rounded-md bg-orange-100 text-red-700 absolute left-0 right-0 my-3 mx-auto w-72 p-2">
+      <p className="text-sm rounded-md bg-orange-100 text-red-700 my-3 mx-auto w-72 p-2">
         {error.message}
       </p>
     );
@@ -87,6 +88,7 @@ const Register = () => {
             Login
           </Link>
         </p>
+        <SocialLogin></SocialLogin>
         {errorElement}
       </section>
     </div>
