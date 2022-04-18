@@ -8,7 +8,7 @@ import logo from "../../images/logo.png";
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
   return (
-    <nav className="grid grid-cols-1 justify-items-center md:flex md:justify-between md:items-center text-sm">
+    <nav className="grid grid-cols-1 bg-violet-100 justify-items-center md:flex md:justify-between md:items-center text-sm">
       <div>
         <Link to="/">
           <img src={logo} alt="" />
@@ -34,7 +34,7 @@ const Header = () => {
               Login
             </Link>
             <Link
-              className="rounded-md font-semibold bg-sky-900 text-white py-2 px-4 mx-4"
+              className="rounded-md font-semibold bg-sky-900 text-white py-2 px-4 mx-4 mb-4 md:mb-0"
               to="/register"
             >
               Register

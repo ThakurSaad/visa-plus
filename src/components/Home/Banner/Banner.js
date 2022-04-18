@@ -5,7 +5,7 @@ import banner2 from "../../../images/banner/banner2.png";
 const Banner = () => {
   return (
     <div className="relative">
-      <img className="block md:hidden my-4" src={banner2} alt="" />
+      <img className="block md:hidden" src={banner2} alt="" />
       <img className="hidden md:block mb-4" src={banner} alt="" />
       <div className=" absolute left-0 right-0 mx-auto w-3/4 top-28">
         <h1

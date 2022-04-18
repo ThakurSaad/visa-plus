@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <section
         id="about-me"
-        className="relative bg-violet-900 text-white py-8 md:py-20 my-4 lg:mt-0"
+        className="relative bg-violet-900 text-white py-8 md:py-20"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center w-3/4 mx-auto">
           <div className="about-me-desc md:w-8/12- mx-auto">
