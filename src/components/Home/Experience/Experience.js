@@ -12,7 +12,7 @@ const Experience = () => {
       >
         Experience
       </h1>
-      <div className="bg-sky-900 my-8 text-white">
+      <div className="bg-violet-900 my-8 text-white">
         <section className="w-4/5 mx-auto ">
           <div className="exp flex flex-col lg:flex-row justify-center items-center">
             <div className="exp-description w-80 font-medium">

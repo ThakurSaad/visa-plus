@@ -17,8 +17,8 @@ const Dream = () => {
           last 107 days of 2022 I spent an average of 7 hours every day coding
           and learning new technologies. I need to have vast and long experience
           for my dream to be true. So, I am craving to work with a company. And
-          I am trying to increase my working hours. I will continue to do so
-          unless I am capable enough.
+          I am trying to increase my working/learning hours. I will continue to
+          do so unless I am capable enough.
         </p>
       </div>
     </section>
