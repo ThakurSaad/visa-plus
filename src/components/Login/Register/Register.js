@@ -4,6 +4,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -39,7 +41,7 @@ const Register = () => {
     if (password === confirmPassword) {
       createUserWithEmailAndPassword(email, password);
     } else {
-      alert("type confirm password carefully");
+      toast("type confirm password carefully");
     }
   };
   return (
@@ -93,6 +95,7 @@ const Register = () => {
         </p>
         <SocialLogin></SocialLogin>
         {errorElement}
+        <ToastContainer/>
       </section>
     </div>
   );

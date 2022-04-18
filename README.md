@@ -12,7 +12,7 @@
 - Authentication is done with email-password and google.
 - I also used React Toastify to notify the user about password reset email sent.
 - There is a protected route when user click on checkout button on services.
-- If not logged user can't go to the checkout page. After logging in user is redirected to the destined page.
+- If not logged in user can't go to the checkout page. After logging in user is redirected to the destined page.
 
 ### Technologies Used
 
