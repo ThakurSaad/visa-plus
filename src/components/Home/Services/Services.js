@@ -10,10 +10,10 @@ const Services = () => {
   }, []);
   console.log(services);
   return (
-    <section>
+    <section className="md:mt-32">
       <h2
         style={{ textShadow: "0 0 5px black, 2px 2px 5px white" }}
-        className="text-center font-bold text-5xl my-8"
+        className="text-center font-bold text-5xl text-sky-900 my-8"
       >
         My Services
       </h2>

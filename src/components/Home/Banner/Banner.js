@@ -10,13 +10,13 @@ const Banner = () => {
       <div className=" absolute left-0 right-0 mx-auto w-3/4 top-28">
         <h1
           style={{ textShadow: "0 0 5px black, 3px 3px 5px white" }}
-          className="font-extrabold text-6xl md:text-8xl"
+          className="font-extrabold text-6xl text-sky-900 md:text-8xl"
         >
           Visa Plus
         </h1>
         <p
-          style={{ textShadow: "0 0 5px black, 0 0 5px white" }}
-          className="font-semibold text-xl mt-4"
+          style={{ textShadow: "0 0 5px black, 0 0 2px white" }}
+          className="font-semibold text-xl text-sky-900 mt-4"
         >
           Entrust your migration process to an expert
         </p>

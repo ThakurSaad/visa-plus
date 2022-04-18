@@ -2,9 +2,12 @@ import React from "react";
 
 const Blogs = () => {
   return (
-    <div>
-      <h1 className="text-6xl">Blogs</h1>
-    </div>
+    <section className="mt-8 mx-8 mb-40">
+      <h1 className="md:text-4xl text-sky-900 font-semibold">
+        {" "}
+        What is the difference between authorization and authentication?
+      </h1>
+    </section>
   );
 };
 
